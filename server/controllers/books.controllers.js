@@ -1,12 +1,12 @@
-const db = require("../db")
+const Book = require("../models/Book");
 
 const getBooks = (req, res) => {
     res.send("Test")
 }
 
 const createBook = async (req, res) => {
-    
-    const createdBook = await db.books.create({title: "Diez semanas en globo", description: "Adios", length: 350})
+
+    const createdBook = await Book.create({title: "Diez semanas en globo", description: "Adios", length: 350})
     res.send(createdBook.id)
 }
 
