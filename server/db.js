@@ -1,5 +1,4 @@
 const { Sequelize } = require("sequelize");
-//const defineBookModel = require("./models/Book")
 
 const sequelize = new Sequelize("prueba_sequelize", "root", "root", {
   host: "localhost",
@@ -7,7 +6,6 @@ const sequelize = new Sequelize("prueba_sequelize", "root", "root", {
 })
 
 const db = {}
-//db.books = defineBookModel(sequelize);
 db.sequelize = sequelize;
 
 
