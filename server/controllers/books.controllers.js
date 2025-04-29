@@ -5,7 +5,7 @@ const getBooks = (req, res) => {
 }
 
 const createBook = async (req, res) => {
-    const createdBook = await db.books.create({title: "Cinco semanas en globo", description: "Hola", length: 350})
+    const createdBook = await db.books.create({title: "Diez semanas en globo", description: "Adios", length: 350})
     res.send(createdBook.id)
 }
 

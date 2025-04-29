@@ -1,7 +1,7 @@
 const { Sequelize } = require("sequelize");
 const defineBookModel = require("./models/Book")
 
-const sequelize = new Sequelize("pruebadb", "root", "root", {
+const sequelize = new Sequelize("prueba_sequelize", "root", "root", {
   host: "localhost",
   dialect: "mysql",
 })
