@@ -9,5 +9,15 @@ const createBook = async (req, res) => {
     res.send(createdBook.id)
 }
 
+const getAuthors = (req, res) => {
+    res.send("Test");
+}
+
+const createAuthor = async(req, res) => {
+    const createAuthor = await Author.create({name: "JR Tolkien", nacionality: "UK", gender: 'M'});
+    res.send(createAuthor.id);
+}
 exports.getBooks = getBooks
 exports.createBook = createBook
+exports.getAuthors = getAuthors;
+exports.createAuthor = createAuthor;

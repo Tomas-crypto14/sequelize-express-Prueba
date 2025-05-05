@@ -4,7 +4,7 @@ const cors = require("cors");
 const express = require("express");
 const db = require("./db");
 const booksRouter = require("./routes/books.routes");
-
+const authorsRouter = require("./routes/books.routes");
 const main = () => {
   const app = express();
   app.use(cors());
@@ -15,6 +15,7 @@ const main = () => {
   });
 
   app.use("/books", booksRouter);
+  app.use("/authors", authorsRouter);
 
   app.listen(port, () => {
     console.log(`App listening on ${port}`);
