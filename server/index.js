@@ -5,7 +5,6 @@ const express = require("express");
 const db = require("./db");
 const booksRouter = require("./routes/books.routes");
 const authorsRouter = require("./routes/books.routes");
-
 const main = () => {
   const app = express();
   app.use(cors());

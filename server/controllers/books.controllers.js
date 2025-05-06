@@ -1,35 +1,35 @@
-const Book = require("../models/Book");
-const Author = require("../models/Authors");
+const Book = require("../models/Book")
+const Author = require("../models/Author");
 const Order = require("../models/Order");
 const getBooks = (req, res) => {
     res.send("Test")
 }
 
-const getAuthor = (req, res) => {
+const getAuthors = (req, res) => {
     res.send("Test");
 }
 const createBook = async (req, res) => {
-
-    const createdBook = await Book.create({title: "Diez semanas en globo", description: "Adios", length: 350})
+    const createdBook = await db.books.create({title: "Cinco semanas en globo", description: "Hola", length: 350})
     res.send(createdBook.id)
 }
 
 const createAuthor = async(req, res) => {
-    const createdAuthor = await Author.create({name: "JK Tolkien",nacionality: "UK", gender: "Female"})
-    res.send(createdAuthor.id)
+    const createAuthor = await Author.create({name: "JR Tolkien", nacionality: "UK", gender: 'M'});
+    res.send(createAuthor.id);
 }
 
-const getOrder = (req, res) => {
+const getOrders = (req, res) => {
     res.send("Test");
 }
 
 const createOrder = async(req, res) => {
-    const createOrder = await Order.create({date: "27-05-2025", user: "Tomas"})
-    res.send(createOrder.id)
+    const createOrder = await Order.create({name: "Mila"});
+        res.send(createOrder.id)
 }
+
 exports.getBooks = getBooks
-exports.getAuthor = getAuthor;
-exports.createBook = createBook;
+exports.createBook = createBook
+exports.getAuthors = getAuthors
 exports.createAuthor = createAuthor;
-exports.getOrder = getOrder;
+exports.getOrders = getOrders;
 exports.createOrder = createOrder;
