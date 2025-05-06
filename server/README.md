@@ -1,22 +1,22 @@
 ```mermaid
 erDiagram
-    USERS ||--o{ ORDERS : places
-    ORDERS ||--|{ ORDER_ITEMS : contains
-    PRODUCTS ||--o{ ORDER_ITEMS : listed_in
-    ORDERS }o--|| PAYMENTS : uses
-    USERS {
+    USUARIOS ||--o{ PEDIDOS : places
+    PEDIDOS ||--|{ ORDER_ITEMS : contains
+    PRODUCTOS ||--o{ ORDER_ITEMS : listed_in
+    PEDIDOS }o--|| METODOS_DE_PAGO : uses
+    USUARIOS {
         int id PK
         string name
         int DNI
     }
-    PRODUCTS {
+    PRODUCTOS {
         int id PK
         string name
         float price
         boolean is_active
         datetime created_at
     }
-    ORDERS {
+    PEDIDOS {
         int id PK
         int user_id FK
         datetime created_at
@@ -30,7 +30,7 @@ erDiagram
         int quantity
         float unit_price
     }
-    PAYMENTS {
+    METODOS_DE_PAGO {
         int id PK
         int order_id FK
         string method
