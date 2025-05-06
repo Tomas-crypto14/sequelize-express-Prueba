@@ -6,9 +6,9 @@ const router = express.Router();
 
 router.get("/", booksController.getBooks);
 router.post("/", booksController.createBook);
-router.get("/", authorsController.getAuthor);
+router.get("/", authorsController.getAuthors);
 router.post("/", authorsController.createAuthor);
-router.get("/", OrderController.getOrder);
+router.get("/", OrderController.getOrders);
 router.post("/", OrderController.createOrder);
 
 module.exports = router;
