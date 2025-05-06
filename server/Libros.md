@@ -27,5 +27,3 @@ SOCIO ||--|{ PRESTAMOS : tiene
         datetime updated_at
     }
 ```
-
-Enviar un mensaje a Ruben Garrido Piquer
