@@ -1,7 +1,7 @@
 ```mermaid
 erDiagram
     USUARIOS ||--o{ PEDIDOS : places
-    PEDIDOS ||--|{ ORDER_ITEMS : contains
+    PEDIDOS ||--o{ ORDER_ITEMS : contains
     PRODUCTOS ||--o{ ORDER_ITEMS : listed_in
     PEDIDOS }o--|| METODOS_DE_PAGO : uses
     USUARIOS {
