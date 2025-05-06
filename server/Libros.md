@@ -23,6 +23,8 @@ SOCIO ||--o{ PRESTAMOS : incluye
         int id_prestamo PK
         datetime fecha_prestamo
         datetime fecha_Devolucion
+        int id_socio FK
+        int id_libro FK
         datetime created_at
         datetime updated_at
     }
