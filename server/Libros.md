@@ -1,7 +1,7 @@
 ```mermaid
 erDiagram
-LIBRO ||--o{ PRESTAMOS : estar
-SOCIO ||--|{ PRESTAMOS : tiene
+LIBRO ||--o{ PRESTAMOS : realiza
+SOCIO ||--o{ PRESTAMOS : incluye
     LIBRO {
         int id_libro PK
         string titulo
@@ -20,7 +20,7 @@ SOCIO ||--|{ PRESTAMOS : tiene
         datetime updated_at
     }
     PRESTAMOS {
-        int id PK
+        int id_prestamo PK
         datetime fecha_prestamo
         datetime fecha_Devolucion
         datetime created_at
